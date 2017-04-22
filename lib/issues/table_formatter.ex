@@ -27,7 +27,7 @@ defmodule Issues.TableFormatter do
     end
 
     def format_for(column_widths) do
-      map_join(column_widths, " / ", fn width ->"~-#{width}s" end) <> "~n"
+      map_join(column_widths, " | ", fn width ->"~-#{width}s" end) <> "~n"
     end
 
     def seperator(column_widths) do
